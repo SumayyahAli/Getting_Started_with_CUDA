@@ -165,6 +165,6 @@ This shows that the arrays are added correctly in parallel.
 With your first CUDA program under your belt, you can now start exploring more advanced areas like optimizing memory usage, experimenting with parallel reduction techniques, or getting familiar with the various CUDA libraries available.
 
 ## Further Learning Resources:
-[CUDA Programming Guide:](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) A comprehensive guide with deeper insights into CUDA.
-[An Even Easier Introduction to CUDA:](https://developer.nvidia.com/blog/even-easier-introduction-cuda/) Practical examples to help you expand your knowledge and skills.
+- [CUDA Programming Guide:](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) A comprehensive guide with deeper insights into CUDA.
+- [An Even Easier Introduction to CUDA:](https://developer.nvidia.com/blog/even-easier-introduction-cuda/) Practical examples to help you expand your knowledge and skills.
 
