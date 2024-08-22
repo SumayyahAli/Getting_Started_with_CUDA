@@ -1,4 +1,8 @@
+
+
 # Introduction to CUDA and GPU Programming 
+
+ <img src="https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841" alt="CUDA Logo" width="300"/>
 
 ## In this tutorial, we’ll cover:
 
@@ -41,5 +45,82 @@ A kernel is a function that runs on the GPU. Kernels are executed by multiple th
 - Threads: The smallest unit of execution.
 - Blocks: Groups of threads.
 - Grids: Groups of blocks.
-- 
+  
 You define how many threads, blocks, and grids you need based on the problem you’re solving.
+
+![image](https://github.com/user-attachments/assets/043ed75a-2540-4d43-8874-a50ff8e80128)
+
+
+## The CUDA Programming Model
+The key advantage of CUDA is its ability to run thousands of threads concurrently. 
+While this might sound complex, CUDA simplifies it by providing intuitive syntax and functions for managing threads, memory, and execution.
+
+# Setting Up Your CUDA Environment
+
+To setting up your  CUDA development environment please have look into the [ NVIDIA CUDA Installation Guide for Windows​](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) & [NVIDIA CUDA Installation Guide for Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+
+
+# Writing Your First CUDA Program !
+
+```cu
+#include <iostream>
+#include <cuda.h>
+
+using namespace std;
+
+// CUDA Kernel function to add elements of two arrays
+__global__ void add(int *a, int *b, int *c) {
+    int index = threadIdx.x;
+    c[index] = a[index] + b[index];
+}
+
+int main() {
+    // Array size
+    int n = 10;
+    int size = n * sizeof(int);
+
+    // Host arrays
+    int h_a[n], h_b[n], h_c[n];
+
+    // Initialize arrays
+    for(int i = 0; i < n; i++) {
+        h_a[i] = i;
+        h_b[i] = i * 2;
+    }
+
+    // Device arrays
+    int *d_a, *d_b, *d_c;
+    cudaMalloc((void **)&d_a, size);
+    cudaMalloc((void **)&d_b, size);
+    cudaMalloc((void **)&d_c, size);
+
+    // Copy data from host to device
+    cudaMemcpy(d_a, h_a, size, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_b, h_b, size, cudaMemcpyHostToDevice);
+
+    // Define the number of threads per block and the number of blocks using dim3 (x, y, z) 
+    dim3 threadsPerBlock(n, 1, 1);
+    dim3 blocksPerGrid(1, 1, 1);
+
+    // Launch kernel on the GPU using dim3 configuration
+    add<<<blocksPerGrid, threadsPerBlock>>>(d_a, d_b, d_c);
+
+    // Copy result back to host
+    cudaMemcpy(h_c, d_c, size, cudaMemcpyDeviceToHost);
+
+    // Display the results
+    for(int i = 0; i < n; i++) {
+        cout << h_a[i] << " + " << h_b[i] << " = " << h_c[i] << endl;
+    }
+
+    // Free device memory
+    cudaFree(d_a);
+    cudaFree(d_b);
+    cudaFree(d_c);
+
+    return 0;
+}
+
+```
+
+
