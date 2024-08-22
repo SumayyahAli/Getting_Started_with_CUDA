@@ -4,7 +4,7 @@
 
  <img src="https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841" alt="CUDA Logo" width="300"/>
 
-## In this tutorial, we’ll cover:
+## This guide will take you through:
 
 - What CUDA is and why it’s important
 - Key concepts in CUDA
@@ -161,4 +161,10 @@ This shows that the arrays are added correctly in parallel.
 <img width="230" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
 
 
+# What’s Next?
+With your first CUDA program under your belt, you can now start exploring more advanced areas like optimizing memory usage, experimenting with parallel reduction techniques, or getting familiar with the various CUDA libraries available.
+
+## Further Learning Resources:
+[CUDA Programming Guide:](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) A comprehensive guide with deeper insights into CUDA.
+[An Even Easier Introduction to CUDA:](https://developer.nvidia.com/blog/even-easier-introduction-cuda/) Practical examples to help you expand your knowledge and skills.
 
