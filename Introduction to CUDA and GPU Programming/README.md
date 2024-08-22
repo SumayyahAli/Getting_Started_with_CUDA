@@ -62,54 +62,63 @@ To setting up your  CUDA development environment please have look into the [ NVI
 
 # Writing Your First CUDA Program !
 
+clone source code `/My_First_CUDA.cu`
+
+`My_First_CUDA.cu`:
 ```cu
 #include <iostream>
-#include <cuda.h>
+// in Windows 
+#include <cuda_runtime.h>
 
 using namespace std;
 
 // CUDA Kernel function to add elements of two arrays
-__global__ void add(int *a, int *b, int *c) {
+__global__ void add(int* a, int* b, int* c) {
     int index = threadIdx.x;
     c[index] = a[index] + b[index];
 }
 
 int main() {
     // Array size
-    int n = 10;
+    const int n = 10;
     int size = n * sizeof(int);
 
     // Host arrays
     int h_a[n], h_b[n], h_c[n];
 
     // Initialize arrays
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         h_a[i] = i;
         h_b[i] = i * 2;
     }
 
     // Device arrays
-    int *d_a, *d_b, *d_c;
-    cudaMalloc((void **)&d_a, size);
-    cudaMalloc((void **)&d_b, size);
-    cudaMalloc((void **)&d_c, size);
+    int* d_a, * d_b, * d_c;
+    cudaMalloc((void**)&d_a, size);
+    cudaMalloc((void**)&d_b, size);
+    cudaMalloc((void**)&d_c, size);
 
     // Copy data from host to device
     cudaMemcpy(d_a, h_a, size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_b, h_b, size, cudaMemcpyHostToDevice);
 
-    // Define the number of threads per block and the number of blocks using dim3 (x, y, z) 
+    /* Define the number of threads per block and the number of blocks using dim3
+       *** What is dim3? **
+         The dim3 data type in CUDA is used to define the dimensions of blocks and grids.
+         It allows you to specify the number of threads in each block and the number of blocks in each grid.
+          You can think of dim3 as a 3D vector with x, y, and z dimensions. In most simple cases  */
+
     dim3 threadsPerBlock(n, 1, 1);
     dim3 blocksPerGrid(1, 1, 1);
 
     // Launch kernel on the GPU using dim3 configuration
-    add<<<blocksPerGrid, threadsPerBlock>>>(d_a, d_b, d_c);
+    add << <blocksPerGrid, threadsPerBlock >> > (d_a, d_b, d_c);
 
     // Copy result back to host
     cudaMemcpy(h_c, d_c, size, cudaMemcpyDeviceToHost);
 
     // Display the results
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         cout << h_a[i] << " + " << h_b[i] << " = " << h_c[i] << endl;
     }
 
@@ -120,7 +129,36 @@ int main() {
 
     return 0;
 }
-
 ```
+## How our Code Works?:
+
+1. Kernel Function (`add`):
+2. 
+The `__global__` keyword defines the add function as a CUDA kernel, meaning it runs directly on the GPU. Each thread operates on one element of the arrays, adding corresponding values from a and b and storing the result in c.
+
+3. Memory Management:
+
+Memory is allocated on both the host (CPU) and device (GPU) using cudaMalloc. The data is then copied from the host arrays (`h_a`, `h_b`) to the device arrays (`d_a`, `d_b`) using `cudaMemcpy`.
+
+3. Grid and Block Configuration:
+
+The kernel is launched with a configuration defined by dim3:
+- `dim3 threadsPerBlock(n, 1, 1)`; sets n threads in a block (each thread handles one element).
+- `dim3 blocksPerGrid(1, 1, 1)`; specifies a single block in the grid (since our data is small).
+This setup ensures that all n elements are processed in parallel.
+
+4.Kernel Launch:
+
+The kernel is launched using `add<<<blocksPerGrid, threadsPerBlock>>>(d_a, d_b, d_c);`. This syntax specifies how the work is distributed across the GPU.
+
+5. Copied Results and Cleanup:
+
+After computation, the results are copied back to the host, displayed, and the device memory is freed using `cudaFree`.
+
+## Output
+This shows that the arrays are added correctly in parallel.
+
+<img width="230" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
+
 
 
