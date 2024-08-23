@@ -170,17 +170,17 @@ This shows that the arrays are added correctly in parallel.
 
 ## Summary
 
-- ** Why CUDA is Important:** We explored how GPUs are built for parallel tasks and how CUDA lets us harness that power to speed up complex applications.
+- **Why CUDA is Important:** We explored how GPUs are built for parallel tasks and how CUDA lets us harness that power to speed up complex applications.
 
-- ** Real-World Uses of CUDA:** From signal processing to video editing and scientific simulations, we looked at how CUDA is making big impacts in various fields.
+- **Real-World Uses of CUDA:** From signal processing to video editing and scientific simulations, we looked at how CUDA is making big impacts in various fields.
 
-- ** Understanding the Key Concepts:** We broke down essential ideas like the relationship between the Host (CPU) and Device (GPU), and how CUDA organizes work using threads, blocks, and grids.
+- **Understanding the Key Concepts:** We broke down essential ideas like the relationship between the Host (CPU) and Device (GPU), and how CUDA organizes work using threads, blocks, and grids.
 
-- ** The CUDA Programming Model:** We saw how CUDA makes it easy to manage thousands of threads without over-complicating things.
+- **The CUDA Programming Model:** We saw how CUDA makes it easy to manage thousands of threads without over-complicating things.
 
-- ** Setting Up Our CUDA Environment:** With help of other resurces, We followed a step-by-step guide for installing CUDA and making sure everything is ready to go on our system.
+- **Setting Up Our CUDA Environment:** With help of other resurces, We followed a step-by-step guide for installing CUDA and making sure everything is ready to go on our system.
 
-- ** Writing Our First CUDA Program:** We coded a simple array addition program, which helped us grasp how to work with CUDA’s thread configuration, memory management, and kernel launches.
+- **Writing Our First CUDA Program:** We coded a simple array addition program, which helped us grasp how to work with CUDA’s thread configuration, memory management, and kernel launches.
 
 ## Further Learning Resources:
 - [CUDA Programming Guide:](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) A comprehensive guide with deeper insights into CUDA.
