@@ -1,5 +1,5 @@
 # Chaptr 1: Introduction to CUDA C/C++ for Prallal Computing 
-![CUDA Logo](https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841)
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841">
 
 ## Overview
 
@@ -43,7 +43,7 @@ Before you start coding, it’s important to grasp some basic CUDA concepts:
    
    You’ll define the number of threads, blocks, and grids based on the problem you’re solving.
 
-![CUDA Thread Hierarchy](https://github.com/user-attachments/assets/043ed75a-2540-4d43-8874-a50ff8e80128)
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/043ed75a-2540-4d43-8874-a50ff8e80128">
 
 ## The CUDA Programming Model
 
