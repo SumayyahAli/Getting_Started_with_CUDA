@@ -140,25 +140,26 @@ int main() {
 
 ![image](https://github.com/user-attachments/assets/bc447e36-7807-4e9d-8d2f-6232f9addf8f)
 
-1. Kernel Function (`add`):
+**1. Kernel Function (`add`):**
+
 The `__global__` keyword defines the add function as a CUDA kernel, meaning it runs directly on the GPU. Each thread operates on one element of the arrays, adding corresponding values from a and b and storing the result in c.
 
-2. Memory Management: 
+**2. Memory Management:** 
 
-Memory is allocated on both the host (CPU) and device (GPU) using cudaMalloc. The data is then copied from the host arrays (`h_a`, `h_b`) to the device arrays (`d_a`, `d_b`) using `cudaMemcpy`.
+  Memory is allocated on both the host (CPU) and device (GPU) using cudaMalloc. The data is then copied from the host arrays (`h_a`, `h_b`) to the device arrays (`d_a`, `d_b`) using `cudaMemcpy`.
 
-3. Grid and Block Configuration:
+**3. Grid and Block Configuration:**
 
 The kernel is launched with a configuration defined by `dim3`:
 - `dim3 threadsPerBlock(n, 1, 1)`; sets n threads in a block (each thread handles one element).
 - `dim3 blocksPerGrid(1, 1, 1)`; specifies a single block in the grid (since our data is small).
 This setup ensures that all n elements are processed in parallel.
 
-4. Kernel Launch:
+**4. Kernel Launch:**
 
-The kernel is launched using `add<<<blocksPerGrid, threadsPerBlock>>>(d_a, d_b, d_c);`. This syntax specifies how the work is distributed across the GPU.
+ The kernel is launched using `add<<<blocksPerGrid, threadsPerBlock>>>(d_a, d_b, d_c);`. This syntax specifies how the work is distributed across the GPU.
 
-5. Copied Results and Cleanup:
+**5. Copied Results and Cleanup:**
 
 After computation, the results are copied back to the host, displayed, and the device memory is freed using `cudaFree`.
 
