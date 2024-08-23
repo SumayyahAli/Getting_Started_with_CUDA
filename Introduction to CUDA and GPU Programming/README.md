@@ -27,7 +27,7 @@ In today's world, applications are increasingly data-heavy and complex. Traditio
 
 - **Advanced Data Analytics:** For research labs dealing with massive datasets, CUDA speeds up statistical modeling, experimental data analysis, and other high-dimensional data tasks, delivering results faster and more efficiently.
 
-## Key Concepts in CUDA
+## Basic Concepts in CUDA
 
 Before you start coding, it’s important to grasp some basic CUDA concepts:
 
@@ -43,13 +43,13 @@ Before you start coding, it’s important to grasp some basic CUDA concepts:
    - **Blocks:** Groups of threads.
    - **Grids:** Groups of blocks.
    
-   You’ll define the number of threads, blocks, and grids based on the problem you’re solving.
+   You’ll need to define the number of threads, blocks, and grids based on the problem you’re solving.
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/043ed75a-2540-4d43-8874-a50ff8e80128">
 
 ## The CUDA Programming Model
 
-CUDA excels at managing thousands of concurrent threads while keeping code straightforward. It provides intuitive syntax for handling threads, memory, and execution—allowing you to focus on writing efficient algorithms.
+CUDA excels at managing thousands of concurrent threads while keeping code straightforward. It provides intuitive syntax for handling threads, memory, and execution allowing us to focus on writing efficient algorithms.
 
 ## Setting Up Your CUDA Environment
 
