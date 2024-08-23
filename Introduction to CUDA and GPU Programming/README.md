@@ -1,4 +1,4 @@
-# 1. Introduction to CUDA C/C++ and GPU for Prallal Computing 
+# 1. Introduction to CUDA C/C++ and GPU for Parallel Computing 
 
 ## Overview
 
