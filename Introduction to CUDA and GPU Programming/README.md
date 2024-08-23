@@ -1,5 +1,4 @@
 # 1. Introduction to CUDA C/C++ and GPU for Prallal Computing 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841">
 
 ## Overview
 
