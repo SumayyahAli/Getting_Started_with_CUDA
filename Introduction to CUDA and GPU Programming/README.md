@@ -143,7 +143,7 @@ int main() {
 2. 
 The `__global__` keyword defines the add function as a CUDA kernel, meaning it runs directly on the GPU. Each thread operates on one element of the arrays, adding corresponding values from a and b and storing the result in c.
 
-3. Memory Management:
+3. Memory Management: 
 
 Memory is allocated on both the host (CPU) and device (GPU) using cudaMalloc. The data is then copied from the host arrays (`h_a`, `h_b`) to the device arrays (`d_a`, `d_b`) using `cudaMemcpy`.
 
