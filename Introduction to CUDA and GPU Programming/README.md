@@ -183,6 +183,7 @@ This shows that the arrays are added correctly in parallel.
 - **Writing Our First CUDA Program:** We coded a simple array addition program, which helped us grasp how to work with CUDA’s thread configuration, memory management, and kernel launches.
 
 ## Further Learning Resources:
+- [CUDA by Example:](https://developer.nvidia.com/cuda-example) The best starting book for GPU Programming and beginner friendly.
 - [CUDA Programming Guide:](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) A comprehensive guide with deeper insights into CUDA.
 - [An Even Easier Introduction to CUDA:](https://developer.nvidia.com/blog/even-easier-introduction-cuda/) Practical beginner friendly resource with practical examples to enhance your skills.
 
