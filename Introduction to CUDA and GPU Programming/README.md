@@ -150,7 +150,7 @@ The `__global__` keyword defines the add function as a CUDA kernel, meaning it r
 
 **3. Grid and Block Configuration:**
 
-The kernel is launched with a configuration defined by `dim3`:
+The kernel is launched with a configuration defined by `dim3 name(x, y, z);`:
 - `dim3 threadsPerBlock(n, 1, 1)`; sets n threads in a block (each thread handles one element).
 - `dim3 blocksPerGrid(1, 1, 1)`; specifies a single block in the grid (since our data is small).
 This setup ensures that all n elements are processed in parallel.
@@ -168,19 +168,6 @@ This shows that the arrays are added correctly in parallel.
 
 <img width="230" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
 
-## Summary
-
-- **Why CUDA is Important:** We explored how GPUs are built for parallel tasks and how CUDA lets us harness that power to speed up complex applications.
-
-- **Real-World Uses of CUDA:** From signal processing to video editing and scientific simulations, we looked at how CUDA is making big impacts in various fields.
-
-- **Understanding the Key Concepts:** We broke down essential ideas like the relationship between the Host (CPU) and Device (GPU), and how CUDA organizes work using threads, blocks, and grids.
-
-- **The CUDA Programming Model:** We saw how CUDA makes it easy to manage thousands of threads without over-complicating things.
-
-- **Setting Up Our CUDA Environment:** With help of other resurces, We followed a step-by-step guide for installing CUDA and making sure everything is ready to go on our system.
-
-- **Writing Our First CUDA Program:** We coded a simple array addition program, which helped us grasp how to work with CUDA’s thread configuration, memory management, and kernel launches.
 
 ## Further Learning Resources:
 - [CUDA by Example:](https://developer.nvidia.com/cuda-example) The best starting book for GPU Programming and beginner friendly.
