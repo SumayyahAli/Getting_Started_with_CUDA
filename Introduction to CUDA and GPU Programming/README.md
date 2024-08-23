@@ -17,13 +17,15 @@ In today's world, applications are increasingly data-heavy and complex. Traditio
 
 ## Real-World Applications
 
-- **Signal Processing and Communications:** Accelerate real-time tasks like radar processing, communication protocols, and sensor networks using CUDA to implement efficient algorithms such as Fast Fourier Transforms (FFT) and filtering.
-  
-- **Scientific Simulations:** Run complex models in fields like physics and molecular dynamics, where traditional CPUs struggle with large-scale, high-speed computations.
+- **Signal Processing and Communications:** CUDA boosts performance in real-time tasks like radar processing, communication protocols, and sensor networks by enabling fast and efficient algorithms such as FFTs and filtering.
 
-- **Embedded and Autonomous Systems:** Use CUDA in applications ranging from automotive to aerospace, enabling rapid prototyping and real-time processing for tasks like image analysis, sensor fusion, and control systems.
+- **Embedded and Autonomous Systems:** CUDA powers applications in automotive and aerospace by enabling rapid prototyping and real-time processing for tasks like sensor fusion and control systems.
 
-- **Advanced Data Analytics:** Analyze large datasets in research environments using CUDA to handle high-dimensional data efficiently, making processes like statistical modeling and experimental data analysis faster.
+- **Video and Image Processing:** From smoother streaming and faster video editing to enhanced image analysis, CUDA accelerates tasks like real-time encoding, decoding, and object detection, making it essential for AR, computer vision, and surveillance systems.
+
+- **Scientific Simulations:** Whether it’s simulating molecular interactions or large-scale physical models, CUDA handles the heavy lifting where traditional CPUs fall short in speed and scale.
+
+- **Advanced Data Analytics:** For research labs dealing with massive datasets, CUDA speeds up statistical modeling, experimental data analysis, and other high-dimensional data tasks, delivering results faster and more efficiently.
 
 ## Key Concepts in CUDA
 
