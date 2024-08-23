@@ -1,4 +1,4 @@
-# Chaptr 1: Introduction to CUDA and GPU Prallal Computing 
+# Chaptr 1: Introduction to CUDA C/C++ for Prallal Computing 
 ![CUDA Logo](https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841)
 
 ## Overview
