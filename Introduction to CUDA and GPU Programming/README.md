@@ -74,7 +74,6 @@ clone source code `/My_First_CUDA.cu`
 `My_First_CUDA.cu`:
 ```cu
 #include <iostream>
-// in Windows 
 #include <cuda_runtime.h>
 
 using namespace std;
