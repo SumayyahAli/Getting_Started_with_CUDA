@@ -3,15 +3,17 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/1435ae44-1a2c-40c1-9372-da6a48296326" alt="image" width="500">
 </div>
+
 ## Overview
 
 This guide will introduce you to:
 
+- What's GPU? 
 - What's the diffrence between GPU and CPU?
-- What's CUDA framework?
+- What's CUDA and why?
 - The basics of CUDA and why it’s significant?
 - Core concepts in CUDA programming
-- How to write and run your first simple CUDA program
+- Your first CUDA Application
 
 Let’s dive in!
 
@@ -86,7 +88,7 @@ Before you start coding or cooking :) , it’s important to grasp some basic CUD
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/043ed75a-2540-4d43-8874-a50ff8e80128">
 </div>
 
-## The CUDA Programming Model
+## CUDA Programming Model
 
 The CUDA Toolkit makes it easy to manage thousands of parallel threads (cooks or workers) without complicated code. It provides simple commands for controlling how these tasks run and how they use memory.
 
@@ -98,20 +100,19 @@ To get started with CUDA development, follow the installation guides for your op
 - [NVIDIA CUDA Installation Guide for Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
 - [NVIDIA CUDA Installation Guide for Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 
-## Writing Your First CUDA Program
+## Writing the First CUDA application!
 
 Clone the source code for your first CUDA program:
 
 **(I'm using CUDA with Visual Studio on Windows OS)**
+
+clone `/My_First_CUDA.cu` via:
 
 ```
 git clone https://github.com/SumayyahAli/Getting_Started_with_CUDA.git
 ```
 or simply download it as `zip` file.
 
-# Writing Your First CUDA Program !
-
-clone source code `/My_First_CUDA.cu`
 
 `My_First_CUDA.cu`:
 ```cu
@@ -127,7 +128,8 @@ __global__ void add(int* a, int* b, int* c)
     c[index] = a[index] + b[index];
 }
 
-int main() {
+int main()
+{
     // Array size
     const int n = 10;
     int size = n * sizeof(int);
@@ -196,7 +198,9 @@ Each thread " worker :)" operates on one element of the arrays, adding correspon
 
 **2. Memory Management:** 
 
-  Memory is allocated on both the host (CPU) and device (GPU) using cudaMalloc. The data is then copied from the host arrays (`h_a`, `h_b`) to the device arrays (`d_a`, `d_b`) using `cudaMemcpy`.
+  Memory is allocated on both the host (CPU) and device (GPU) using cudaMalloc. 
+  
+  The data is then copied from the host(CPU) arrays (`h_a`, `h_b`) to the device (GPU) arrays (`d_a`, `d_b`) using `cudaMemcpy`.
 
 **3. Grid and Block Configuration:**
 
@@ -220,6 +224,16 @@ This shows that the arrays are added correctly in parallel.
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
 </div>
 
+
+## The End of the "Beginning" :) 
+
+You’ve taken your first steps into the world of GPU programming with CUDA.
+
+From understanding how GPUs work to writing your first parallel application!
+
+However remember, this is just the end of the beginning... CUDA opens up an entirely new world of possibilities, and there’s so much more to explore.
+
+***with more practice, you can tackle even more complex challenges.....***
 
 
 ## Further Learning Resources:
