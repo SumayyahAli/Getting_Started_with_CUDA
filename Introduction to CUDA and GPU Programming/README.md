@@ -170,6 +170,7 @@ This shows that the arrays are added correctly in parallel.
 <img width="230" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
 
 
+
 ## Further Learning Resources:
 - [CUDA by Example:](https://developer.nvidia.com/cuda-example) The best starting book for GPU Programming and beginner friendly.
 - [CUDA Programming Guide:](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) A comprehensive guide with deeper insights into CUDA.
