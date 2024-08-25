@@ -1,13 +1,17 @@
 # Getting Started with CUDA GPU
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841">
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4ba2c60e-e699-4c4c-95e2-83499593f841" alt="image" width="500">
+</div>
+
+
 
 
 Welcome to the CUDA Introductory Guide Series! This series is designed to provide a beginner-friendly introduction to CUDA programming and help you get started with GPU programming for parallel computing
 
 ## Table of Contents
-1. [Introduction to CUDA and GPU Programming](https://github.com/SumayyahAli/CUDA/tree/main/Introduction%20to%20CUDA%20and%20GPU%20Programming)
-2. Memory Management in CUDA
-3. How to Compile CUDA Code in Embedded Jetson Hardware
+1. [Introduction to GPU and CUDA Programming](https://github.com/SumayyahAli/CUDA/tree/main/Introduction%20to%20CUDA%20and%20GPU%20Programming)
+2. How to Compile CUDA Code in Embedded Jetson Hardware
    
 
 ## Who Is This guide For?
