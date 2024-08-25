@@ -6,7 +6,8 @@ Welcome to the CUDA Introductory Guide Series! This series is designed to provid
 
 ## Table of Contents
 1. [Introduction to CUDA and GPU Programming](https://github.com/SumayyahAli/CUDA/tree/main/Introduction%20to%20CUDA%20and%20GPU%20Programming)
-2. Getting Started with Memory Management in CUDA
+2. Memory Management in CUDA
+3. How to Compile CUDA Code in Embedded Jetson Hardware
    
 
 ## Who Is This guide For?
