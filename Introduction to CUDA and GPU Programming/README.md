@@ -63,8 +63,10 @@ Clone the source code for your first CUDA program:
 **(I'm using CUDA with Visual Studio on Windows OS)**
 
 ```
-.....
+git clone https://github.com/SumayyahAli/Getting_Started_with_CUDA.git
 ```
+or simply download it as `zip` file.
+
 # Writing Your First CUDA Program !
 
 clone source code `/My_First_CUDA.cu`
