@@ -1,16 +1,17 @@
 #include <iostream>
-// in Windows 
 #include <cuda_runtime.h>
 
 using namespace std;
 
 // CUDA Kernel function to add elements of two arrays
-__global__ void add(int* a, int* b, int* c) {
+__global__ void add(int* a, int* b, int* c) 
+{
     int index = threadIdx.x;
     c[index] = a[index] + b[index];
 }
 
-int main() {
+int main() 
+{
     // Array size
     const int n = 10;
     int size = n * sizeof(int);
@@ -19,7 +20,8 @@ int main() {
     int h_a[n], h_b[n], h_c[n];
 
     // Initialize arrays
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+{
         h_a[i] = i;
         h_b[i] = i * 2;
     }
@@ -34,11 +36,13 @@ int main() {
     cudaMemcpy(d_a, h_a, size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_b, h_b, size, cudaMemcpyHostToDevice);
 
-    /* Define the number of threads per block and the number of blocks using dim3
-       *** What is dim3? **
-         The dim3 data type in CUDA is used to define the dimensions of blocks and grids.
-         It allows you to specify the number of threads in each block and the number of blocks in each grid.
-          You can think of dim3 as a 3D vector with x, y, and z dimensions. In most simple cases  */
+    /* 
+    Define the number of threads per block and the number of blocks using dim3
+    *** What is dim3? ***
+    The dim3 data type in CUDA is used to define the dimensions of blocks and grids.
+    It allows you to specify the number of threads in each block and the number of blocks in each grid.
+    You can think of dim3 as a 3D vector with x, y, and z dimensions. In most simple cases 
+    */
 
     dim3 threadsPerBlock(n, 1, 1);
     dim3 blocksPerGrid(1, 1, 1);
@@ -50,7 +54,8 @@ int main() {
     cudaMemcpy(h_c, d_c, size, cudaMemcpyDeviceToHost);
 
     // Display the results
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         cout << h_a[i] << " + " << h_b[i] << " = " << h_c[i] << endl;
     }
 
