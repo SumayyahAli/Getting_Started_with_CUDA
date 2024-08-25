@@ -1,5 +1,8 @@
-# 1. Introduction to CUDA C/C++ and GPU for Parallel Computing 
+# 1. Introduction to GPU and CUDA C/C++ for Parallel Computing 
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/1435ae44-1a2c-40c1-9372-da6a48296326" alt="image" width="500">
+</div>
 ## Overview
 
 This guide will introduce you to:
@@ -16,7 +19,9 @@ Let’s dive in!
 A Graphics Processing Unit (GPU) is designed for parallel processing, making it ideal for handling large-scale computations. While originally developed for rendering graphics, GPUs are now widely used for tasks like scientific simulations, deep learning, and big data analytics.
 
 ## GPU vs CPU
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/dd93e384-2f59-4bb2-ae2b-d59449650b36">
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dd93e384-2f59-4bb2-ae2b-d59449650b36" alt="image" width="250">
+</div>
 
 We can think about it like if we planed to prepare a big feast..
 
@@ -76,7 +81,10 @@ Before you start coding or cooking :) , it’s important to grasp some basic CUD
    
    You’ll need to define the number of threads, blocks, and grids based on the problem you’re solving or the dishes you plan to cook :).
 
+<div align="center">
+
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/043ed75a-2540-4d43-8874-a50ff8e80128">
+</div>
 
 ## The CUDA Programming Model
 
@@ -174,8 +182,11 @@ int main() {
 }
 ```
 ## How our Code Works?:
+<div align="center">
 
 ![image](https://github.com/user-attachments/assets/bc447e36-7807-4e9d-8d2f-6232f9addf8f)
+
+</div>
 
 **1. Kernel Function (`add`):**
 
@@ -204,8 +215,10 @@ After computation, the results are copied back to the host, displayed, and the d
 
 ## Output
 This shows that the arrays are added correctly in parallel.
+<div align="center">
 
-<img width="230" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/98f6adfa-75ab-46a6-b3ce-3806153f1f17">
+</div>
 
 
 
