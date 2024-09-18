@@ -7,7 +7,8 @@
 
 
 
-Welcome to the CUDA Introductory Guide Series! This series is designed to provide a beginner-friendly introduction to CUDA programming and help you get started with GPU programming for parallel computing
+Welcome to the CUDA Introductory Guide! 
+This guide is designed to provide a beginner friendly introduction to CUDA programming and help you get started with GPU programming for parallel computing.
 
 ## Table of Contents
 1. [Introduction to GPU and CUDA Programming](https://github.com/SumayyahAli/CUDA/tree/main/Introduction%20to%20CUDA%20and%20GPU%20Programming)
